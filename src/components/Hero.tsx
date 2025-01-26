@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { colors } from '../styles/colors';
-interface Hero {
-  scrollY: number;
+interface HeroProps {
+  scrollY?: number;
   videoSrc?: string;
   fallbackImageSrc?: string;
 }
@@ -13,8 +13,8 @@ interface Hero {
 const Hero = ({ 
   scrollY, 
   videoSrc = '/background.mp4',
-  fallbackImageSrc = '/images/Frateli-Visual-Centerpiece.jpg' 
-}: MainVisualProps) => {
+  fallbackImageSrc = '/tds-backup.png' 
+}: HeroProps) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [parallaxStyle, setParallaxStyle] = useState({});
   const [contentParallaxStyle, setContentParallaxStyle] = useState({});
