@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { colors } from '../styles/colors';
+// import { colors } from '../styles/colors';
 interface HeroProps {
   scrollY?: number;
   videoSrc?: string;
@@ -11,7 +11,7 @@ interface HeroProps {
 }
 
 const Hero = ({ 
-  scrollY, 
+  scrollY = 0, 
   videoSrc = '/background.mp4',
   fallbackImageSrc = '/tds-backup.png' 
 }: HeroProps) => {
