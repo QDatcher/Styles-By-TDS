@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customGold: '#d4af37',
+        customTeal: '#008080',
       },
     },
   },
