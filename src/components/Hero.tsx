@@ -56,7 +56,7 @@ const Hero = ({
   return (
     <section 
       className="relative w-full min-h-[100svh] lg:h-screen overflow-hidden"
-      style={parallaxStyle}
+      style={{...parallaxStyle, zIndex: 0}}
       aria-label="Welcome to Styles By TDS"
     >
       {isVideoLoaded ? (
@@ -94,8 +94,8 @@ const Hero = ({
             <Image
               src="/TDS.png"
               alt="Styles By TDS Logo"
-              width={280}
-              height={130}
+              width={500}
+              height={500}
               className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[280px] mx-auto"
             />
           </div>
