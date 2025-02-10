@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import { useSwipeable } from 'react-swipeable';
 import { colors } from '../../../styles/colors';
 import { images } from '../../../data/imageUrl';
+import Image from 'next/image';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -140,13 +141,14 @@ export default function Gallery() {
     document.body.style.visibility = 'hidden';
 
     const imageLoadPromises = images.map((image, index) => {
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.src = image.src;
-        img.onload = () => {
+      return new Promise((resolve, reject) => {
+        const imageLoader = new window.Image();
+        imageLoader.src = image.src;
+        imageLoader.onload = () => {
           setLoadedImages(prev => new Set(prev).add(index));
           resolve(null);
         };
+        imageLoader.onerror = reject;
       });
     });
 
@@ -195,10 +197,13 @@ export default function Gallery() {
         <GalleryGrid $isLoading={isLoading}>
           {images.map((image, index) => (
             <GalleryItem key={index} onClick={() => openModal(index)}>
-              <img 
-                src={image.src} 
+              <Image 
+                src={image.src}
                 alt={image.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={loadedImages.has(index) ? 'loaded' : ''}
+                style={{ objectFit: 'cover' }}
               />
             </GalleryItem>
           ))}

@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const NavbarContainer = styled.nav<{ $isScrolled: boolean }>`

@@ -1,22 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styled from 'styled-components';
-import { colors } from '@/styles/colors';
 
-const TransitionWrapper = styled(motion.div)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: ${colors.black};
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-origin: right;
-`;
 
 const pageTransition = {
   initial: {
