@@ -134,6 +134,34 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+  const [modalWidth, setModalWidth] = useState('40%');
+
+  useEffect(() => {
+    setModalWidth(window.innerWidth <= 768 ? '95%' : '40%');
+  }, []);
+
+  const ModalStyles = {
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+      zIndex: 9999,
+    },
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: colors.black,
+      border: `2px solid ${colors.teal}`,
+      borderRadius: '8px',
+      padding: '20px',
+      overflow: 'hidden',
+      width: modalWidth,
+      position: 'absolute' as const,
+      zIndex: 10000,
+    },
+  };
 
   useEffect(() => {
     // Prevent any content from showing initially
@@ -212,28 +240,7 @@ export default function Gallery() {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Image Modal"
-          style={{
-            overlay: {
-              backgroundColor: 'rgba(0, 0, 0, 0.75)',
-              zIndex: 9999,
-            },
-            content: {
-              top: '50%',
-              left: '50%',
-              right: 'auto',
-              bottom: 'auto',
-              marginRight: '-50%',
-              transform: 'translate(-50%, -50%)',
-              backgroundColor: colors.black,
-              border: `2px solid ${colors.teal}`,
-              borderRadius: '8px',
-              padding: '20px',
-              overflow: 'hidden',
-              width: '40%',
-              position: 'relative',
-              zIndex: 10000,
-            },
-          }}
+          style={ModalStyles}
         >
           {currentIndex !== null && (
             <ModalContent {...handlers}>

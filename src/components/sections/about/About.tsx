@@ -3,16 +3,16 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className="relative h-screen py-16 px-4 bg-white">
+    <section className="relative min-h-screen py-16 px-4 bg-white mb-20">
       <h2 className="text-4xl font-bold text-center mb-8 relative z-10">
         About Me
       </h2>
 
-      <div className="max-w-4xl mx-auto space-y-8 flex items-center justify-center">
+      <div className="max-w-4xl mx-auto space-y-8 flex flex-col md:flex-row items-center justify-center">
         <div
-          className="mx-auto w-full max-w-md transition-opacity duration-5000 ease-out"
+          className="mx-auto w-full max-w-md transition-opacity duration-4000 ease-out mb-8 md:mb-0"
           style={{ 
-            animation: 'fadeIn 5s ease-out forwards'
+            animation: 'fadeIn 4s ease-out forwards'
           }}
         >
           <style jsx>{`
@@ -30,7 +30,7 @@ const About = () => {
             alt="Owner Photo"
             width={300}
             height={300}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg mx-auto"
           />
         </div>
         <div className="text-center px-4">
