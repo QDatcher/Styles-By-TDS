@@ -61,6 +61,27 @@ export default function ClientLayout({
 
   useEffect(() => {
     setIsLoading(false);
+
+    // Load Zapier chat widget script
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Add chatbot element
+    const chatbotElement = document.createElement('zapier-interfaces-chatbot-embed');
+    chatbotElement.setAttribute('is-popup', 'true');
+    chatbotElement.setAttribute('chatbot-id', 'cm6ytxc2s005bgjlogo3ygtuz');
+    document.body.appendChild(chatbotElement);
+
+    return () => {
+      // Cleanup
+      const existingScript = document.head.querySelector('script[src*="zapier-interfaces"]');
+      const existingChatbot = document.querySelector('zapier-interfaces-chatbot-embed');
+      if (existingScript) document.head.removeChild(existingScript);
+      if (existingChatbot) document.body.removeChild(existingChatbot);
+    };
   }, []);
 
   return (
