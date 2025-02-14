@@ -35,7 +35,7 @@ const Title = styled.h3`
   color: ${colors.gold};
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: 'CedarvilleCursive', cursive;
+  font-family: 'DancingScript';
 `;
 
 

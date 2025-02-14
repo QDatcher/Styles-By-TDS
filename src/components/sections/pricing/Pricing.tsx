@@ -30,7 +30,7 @@ const Title = styled(motion.h2)`
 `;
 
 const Subtitle = styled(motion.p)`
-  color: ${colors.teal};
+  color: white;
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
@@ -70,7 +70,7 @@ const ServiceTitle = styled.h3`
   color: ${colors.gold};
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: 'CedarvilleCursive', cursive;
+  font-family: 'DancingScript';
 `;
 
 const Price = styled.p`

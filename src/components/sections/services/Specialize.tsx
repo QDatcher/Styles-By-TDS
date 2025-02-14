@@ -41,7 +41,7 @@ const AnimatedTitle = styled(motion.h2)`
   color: ${colors.gold};
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  font-family: CedarvilleCursive;
+  font-family: DancingScript;
 `;
 
 const AnimatedDescription = styled(motion.p)`
@@ -119,7 +119,6 @@ const Specialize = () => {
               and intricate braiding techniques. Our gentle approach ensures kids feel
               comfortable and confident, while our skilled braiding and crocheting
               services create stunning, long-lasting styles that celebrate your natural beauty.
-
             </AnimatedDescription>
             <AnimatedDescription
               initial={{ opacity: 0, x: -50 }}
@@ -127,11 +126,13 @@ const Specialize = () => {
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              Whether it&apos;s your child&apos;s first haircut or you&apos;re looking for elaborate
-              braided designs, our experienced stylists deliver exceptional results in
-              a welcoming environment.
+              As a mother myself, I&apos;ve created a safe and nurturing environment where children 
+              can relax and be themselves. To help your child feel most comfortable and 
+              independent during their styling session, I recommend a quick drop-off service. 
+              This approach often helps children settle in better and enjoy their hair 
+              experience more fully. Rest assured, I&apos;ll keep you updated with photos of 
+              their progress!
             </AnimatedDescription>
-
           </Content>
           
           <ImageContainer>

@@ -41,7 +41,7 @@ const Title = styled(motion.h2)`
   color: ${colors.gold};
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  font-family: var(--font-geist-sans);
+  font-family: Caslon;
   line-height: 1.2;
 `;
 

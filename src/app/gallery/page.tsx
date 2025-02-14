@@ -22,16 +22,15 @@ const Title = styled.h1`
   font-size: 3rem;
   color: ${colors.gold};
   margin-bottom: 1rem;
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: 'DancingScript';
 `;
-
 
 export default function GalleryPage() {
   return (
     <PageTransition>
       <GalleryContainer>
         <Header>
-          <Title className="important-font CedarvilleCursive">Gallery</Title>
+          <Title className="important-font">Gallery</Title>
         </Header>
         <Gallery />
       </GalleryContainer>

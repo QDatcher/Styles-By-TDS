@@ -104,9 +104,7 @@ const Hero = ({
             Experience the best in hair styling and extensions in the DMV
           </h1>
           
-          <p className="text-white text-sm sm:text-base mb-4 text-center">
-            410 Van Dorn St. Alexandria, VA 22304
-          </p>
+         
           
           <div className="flex justify-center w-full">
             <Link 

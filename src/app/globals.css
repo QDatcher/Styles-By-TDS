@@ -21,6 +21,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../../public/fonts/Dancing-Script/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+
+
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -28,5 +38,5 @@ body {
 }
 
 .important-font {
-  font-family: 'CedarvilleCursive', cursive;
+  font-family: 'DancingScript';
 }

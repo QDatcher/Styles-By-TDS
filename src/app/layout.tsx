@@ -1,91 +1,27 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/sections/navbar/Navbar";
-import styled from 'styled-components';
-import { colors } from '@/styles/colors';
-import { AnimatePresence } from "framer-motion";
-import Footer from "@/components/sections/footer/Footer";
-import StyledComponentsRegistry from '../lib/registry';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const LoadingOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: ${colors.black};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease-in-out;
-`;
-
-const LoadingContent = styled.div`
-  text-align: center;
-  color: ${colors.gold};
-`;
-
-const LoadingSpinner = styled.div`
-  border: 4px solid ${colors.teal};
-  border-top: 4px solid ${colors.gold};
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 1rem;
-  animation: spin 1s linear infinite;
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-`;
+import ClientLayout from '@/components/ClientLayout';
+import { metadata } from './metadata'
+import './globals.css'
+export { metadata }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ visibility: isLoading ? 'hidden' : 'visible' }}
-      >
-        <StyledComponentsRegistry>
-          {isLoading && (
-            <LoadingOverlay>
-              <LoadingContent>
-                <LoadingSpinner />
-                <h2 className="text-2xl font-semibold">Styles By TDS</h2>
-              </LoadingContent>
-            </LoadingOverlay>
-          )}
-          <Navbar />
-          <AnimatePresence mode="wait">
-            {children}
-          </AnimatePresence>
-          <Footer />
-        </StyledComponentsRegistry>
+      <head>
+        {/* 
+          Developer: Quentin Datcher
+          Website: qdatcher.com
+          Built: ${new Date().getFullYear()}
+        */}
+        <meta name="developer" content="Quentin Datcher | qdatcher.com" />
+      </head>
+      <body>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

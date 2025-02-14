@@ -19,8 +19,9 @@ const NavbarContainer = styled.nav<{ $isScrolled: boolean }>`
 `;
 
 const Logo = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: 'DancingScript';
+  font-size: 1.7rem;
+  font-weight: 700;
   color: ${colors.gold};
 `;
 
@@ -161,7 +162,7 @@ export default function Navbar() {
     <>
       <NavbarContainer $isScrolled={isScrolled}>
         <Link href="/">
-          <Logo className="important-font">
+          <Logo>
             Styles By TDS
           </Logo>
         </Link>

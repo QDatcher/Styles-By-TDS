@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { colors } from '@/styles/colors';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaPhone } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
   background-color: ${colors.black};
@@ -49,7 +49,7 @@ const BookingSection = styled.div`
 const BookingText = styled.h3`
   color: ${colors.gold};
   font-size: 1.8rem;
-  font-family: var(--font-geist-sans);
+  font-family: Caslon;
   margin-bottom: 0.5rem;
 `;
 
@@ -141,13 +141,13 @@ export default function Footer() {
         </LogoSection>
 
         <BookingSection>
-          <BookingText>Let&apos;s Get You Booked</BookingText>
+          <BookingText>Let&apos;s Get You Booked!</BookingText>
           <BookButton href="/book">Book Now</BookButton>
         </BookingSection>
 
         <ContactSection>
-          <ContactTitle>Have a Question? <br /> Get In Touch With Me</ContactTitle>
-          <EmailText>stylesbytds@gmail.com</EmailText>
+          <ContactTitle>Have a Question? <br />Get In Touch With Me</ContactTitle>
+          <EmailText>240-899-0404</EmailText>
           <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
             <SocialLink 
               href="https://www.instagram.com/styles_by_tds/" 
@@ -157,9 +157,9 @@ export default function Footer() {
               <FaInstagram />
             </SocialLink>
             <SocialLink 
-              href="mailto:stylesbytds@gmail.com"
+              href="tel:240-899-0404"
             >
-              <FaEnvelope />
+              <FaPhone />
             </SocialLink>
           </div>
         </ContactSection>
