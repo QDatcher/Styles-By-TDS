@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero = ({ 
   scrollY = 0, 
-  videoSrc = '/background.mp4',
+  videoSrc = '/video/bacground3.mp4',
   fallbackImageSrc = '/tds-backup.png' 
 }: HeroProps) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -60,27 +60,31 @@ const Hero = ({
       aria-label="Welcome to Styles By TDS"
     >
       {isVideoLoaded ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={fallbackImageSrc}
-          aria-hidden="true"
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        >
-          <source src={videoSrc} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={fallbackImageSrc}
+            aria-hidden="true"
+            className="w-full h-auto"
+          >
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       ) : (
-        <Image
-          src={fallbackImageSrc}
-          alt="Styles By TDS Salon Ambiance"
-          priority
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-        />
+        <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
+          <Image
+            src={fallbackImageSrc}
+            alt="Styles By TDS Salon Ambiance"
+            priority
+            width={1920}
+            height={1080}
+            className="w-full h-auto"
+          />
+        </div>
       )}
       
       <div className="absolute inset-0 bg-black opacity-60 lg:opacity-50 z-10"></div>
@@ -101,7 +105,7 @@ const Hero = ({
           </div>
           
           <h1 className="text-white text-base sm:text-lg md:text-lg font-light mb-2 leading-relaxed">
-            Experience the best in hair styling and extensions in the DMV
+            Experience the best in hair styling and extensions in Fort Washington
           </h1>
           
          
