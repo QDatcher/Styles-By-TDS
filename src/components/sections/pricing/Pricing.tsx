@@ -113,17 +113,17 @@ const PrimaryButton = styled(Button)`
   }
 `;
 
-const SecondaryButton = styled(Button)`
-  background-color: transparent;
-  color: ${colors.gold};
-  border: 2px solid ${colors.gold};
+// const SecondaryButton = styled(Button)`
+//   background-color: transparent;
+//   color: ${colors.gold};
+//   border: 2px solid ${colors.gold};
   
-  &:hover {
-    background-color: ${colors.gold};
-    color: ${colors.black};
-    transform: translateY(-2px);
-  }
-`;
+//   &:hover {
+//     background-color: ${colors.gold};
+//     color: ${colors.black};
+//     transform: translateY(-2px);
+//   }
+// `;
 
 export default function Pricing() {
   return (
@@ -196,8 +196,7 @@ export default function Pricing() {
         </PricingGrid>
 
         <CTAContainer>
-          <PrimaryButton href="/book">Book Appointment</PrimaryButton>
-          <SecondaryButton href="https://www.instagram.com/styles_by_tds/">Contact for Special Requests</SecondaryButton>
+          <PrimaryButton href="https://www.instagram.com/styles_by_tds/">Book Appointment</PrimaryButton>
         </CTAContainer>
       </Container>
     </PricingSection>

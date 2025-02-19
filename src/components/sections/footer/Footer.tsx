@@ -142,7 +142,7 @@ export default function Footer() {
 
         <BookingSection>
           <BookingText>Let&apos;s Get You Booked!</BookingText>
-          <BookButton href="/book">Book Now</BookButton>
+          <BookButton href="https://www.instagram.com/styles_by_tds/">Book Now</BookButton>
         </BookingSection>
 
         <ContactSection>

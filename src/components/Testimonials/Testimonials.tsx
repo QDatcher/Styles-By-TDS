@@ -77,7 +77,7 @@ const Testimonials = () => {
       photo: '/images/stylesbytds-kid2-crochet.jpg',
       name: 'Tiffany Seaward',
       testimonial: 'My Daughter Loved It!',
-      author: 'Tiffany Seaward',
+      author: 'Client\'s Mother',
     },
 
     // Add more testimonials as needed

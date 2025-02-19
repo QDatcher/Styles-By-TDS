@@ -105,14 +105,14 @@ const Hero = ({
           </div>
           
           <h1 className="text-white text-base sm:text-lg md:text-lg font-light mb-2 leading-relaxed">
-            Experience the best in hair styling and extensions in Fort Washington
+            Experience the best in hair styling and extensions in A
           </h1>
           
          
           
           <div className="flex justify-center w-full">
             <Link 
-              href="/order" 
+              href="https://www.instagram.com/styles_by_tds/" 
               className="w-32 sm:w-36 px-4 sm:px-6 py-2 bg-transparent border-2 border-white 
                 text-white font-bold rounded text-xs sm:text-sm hover:border-customGold hover:bg-customGold  
                 transition duration-300 text-center touch-manipulation active:bg-white/90 

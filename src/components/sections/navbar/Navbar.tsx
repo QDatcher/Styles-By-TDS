@@ -170,7 +170,7 @@ export default function Navbar() {
           <NavLink href="/about">About</NavLink>
           <NavLink href="/gallery">Gallery</NavLink>
         </NavLinks>
-        <BookButton>Book Now</BookButton>
+        <BookButton><Link href="https://www.instagram.com/styles_by_tds/">Book Now</Link></BookButton>
         <HamburgerButton onClick={toggleMobileNav}>☰</HamburgerButton>
       </NavbarContainer>
 

@@ -210,7 +210,7 @@ const Hero2 = ({ scrollY = 0 }: Hero2Props) => {
         </Tagline>
         <div className="flex justify-center w-full">
             <Link 
-              href="/order" 
+              href="https://www.instagram.com/styles_by_tds/" 
               className="w-32 sm:w-36 px-4 sm:px-6 py-2 bg-transparent border-2 border-white 
                 text-white font-bold rounded text-xs sm:text-sm hover:border-customGold hover:bg-customGold  
                 transition duration-300 text-center touch-manipulation active:bg-white/90 
