@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero = ({ 
   scrollY = 0, 
-  videoSrc = '/video/bacground3.mp4',
+  videoSrc = '/video/background3.mp4',
   fallbackImageSrc = '/tds-backup.png' 
 }: HeroProps) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
