@@ -105,7 +105,7 @@ const Hero = ({
           </div>
           
           <h1 className="text-white text-base sm:text-lg md:text-lg font-light mb-2 leading-relaxed">
-            Experience the best in hair styling and extensions in A
+            Experience the best in hair styling and extensions in Accokeek, Maryland
           </h1>
           
          
