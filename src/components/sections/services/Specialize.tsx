@@ -67,20 +67,24 @@ const StyledImage = styled(motion.div)`
 
 const images = [
   {
-    src: "/images/transparent/stylesbytds-little-girl-back.png",
+    src: "/images/transparent/skylartransparent.png",
     alt: "Child hairstyling example 1"
   },
   {
-    src: "/images/transparent/little-girl-hair.png",
+    src: "/images/transparent/stylesbytds-little-girl-back.png",
     alt: "Child hairstyling example 2"
   },
   {
-    src: "/images/transparent/stylesbytds-little-girl-front.png",
+    src: "/images/transparent/little-girl-hair.png",
     alt: "Child hairstyling example 3"
   },
   {
-    src: "/images/transparent/stylesbytds-little-girl-transparent.png",
+    src: "/images/transparent/stylesbytds-little-girl-front.png",
     alt: "Child hairstyling example 4"
+  },
+  {
+    src: "/images/transparent/stylesbytds-little-girl-transparent.png",
+    alt: "Child hairstyling example 5"
   }
 ];
 
