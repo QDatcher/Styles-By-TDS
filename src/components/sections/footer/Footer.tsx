@@ -169,11 +169,11 @@ export default function Footer() {
         © {currentYear} Styles By TDS. All rights reserved. <br />
         Powered by{' '}
         <PoweredBy 
-          href="https://qdatcher.com" 
+          href="https://newworldv.com" 
           target="_blank" 
           rel="noopener noreferrer"
         >
-          Quentin Datcher
+          New World Ventures
         </PoweredBy>
       </Copyright>
     </FooterContainer>
