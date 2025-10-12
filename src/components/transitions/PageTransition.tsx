@@ -13,7 +13,7 @@ const pageTransition = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "easeInOut",
+      ease: [0.4, 0, 0.2, 1],
     },
   },
   exit: {
@@ -21,7 +21,7 @@ const pageTransition = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "easeInOut",
+      ease: [0.4, 0, 0.2, 1],
     },
   },
 };
